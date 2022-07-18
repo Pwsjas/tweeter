@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/3px-tile.png');
+  background-color:hwb(207 86% 0% / 0.897);
+  text-align: center;
+}
+
+.avatar-name > h2 {
+  margin: 0;
+}
+
+.avatar-name > img {
+  padding-top: 100px;
+  width: 75%;
+  height: 75;
+}
+

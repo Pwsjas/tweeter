@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position:fixed;
+}
+
+nav > span {
+  font-family: 'Bungee', cursive;
+  font-size: 36px;
+  margin-bottom: 0.5em;
+}
+
+.write-tweet {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.write-tweet > i {
+  color: red;
+}

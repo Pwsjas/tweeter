@@ -1,0 +1,75 @@
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  margin-top: 3em;
+  font-weight: 700;
+}
+
+article:hover {
+  box-shadow: 5px 5px rgb(177, 175, 201);
+}
+
+article h2 {
+  display:none;
+}
+
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+article img {
+  width: 35%;
+  margin-right: 1em;
+}
+
+article header output {
+  display:flex;
+  align-items: center;
+}
+
+#faded {
+  color: #b9b5b0;
+}
+
+article label {
+  padding: 1em;
+}
+
+article footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top-style: solid;
+  border-top-width: 5px;
+  border-top-color: black;
+  margin: 1em;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  font-size: 16px;
+}
+
+article footer output {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+article footer output i {
+  padding: 0.2em;
+  color: #4056A1;
+}
+
+article footer output i:hover {
+  color:darkgoldenrod;
+}
+
+article div {
+  display:flex;
+  flex-direction: row;
+}

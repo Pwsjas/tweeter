@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/display-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -57,6 +58,27 @@
           </div>
         </form>
       </section>
+
+      <article class="display-tweet">
+        <h2>Tweet</h2>
+          <header>
+            <div>
+              <img src="https://i.imgur.com/73hZDYK.png">
+              <output>NAME</output>
+            </div>
+            <output id="faded">@NAME</output>
+          </header>
+          <label>This is a tweet tweet tweet :)</label>
+          <footer>
+            <output>10 Days Ago</output>
+            <output>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </output>
+          </footer>
+      </article>
+
     </main>
   </body>
 </html>

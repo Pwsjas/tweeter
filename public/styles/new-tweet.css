@@ -38,14 +38,15 @@
   border-bottom-width: 5px;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  height: 1.5em;
+  height: 2.5em;
+  font-weight: 700;
+  font-size: 20px;
   outline: none;
   overflow:hidden;
 }
 
 .tweet-form > label {
   font-size: 30px;
-  position:fixed;
   font-weight: 700;
 }
 

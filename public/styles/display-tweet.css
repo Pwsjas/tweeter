@@ -46,6 +46,7 @@ article header output {
 
 article label {
   padding: 1em;
+  overflow-wrap:break-word;
 }
 
 article footer {

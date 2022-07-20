@@ -20,7 +20,8 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -59,25 +60,7 @@
         </form>
       </section>
 
-      <article class="display-tweet">
-        <h2>Tweet</h2>
-          <header>
-            <div>
-              <img src="https://i.imgur.com/73hZDYK.png">
-              <output>NAME</output>
-            </div>
-            <output id="faded">@NAME</output>
-          </header>
-          <label>This is a tweet tweet tweet :)</label>
-          <footer>
-            <output>10 Days Ago</output>
-            <output>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </output>
-          </footer>
-      </article>
+      <section class="tweets-container"></section>
 
     </main>
   </body>

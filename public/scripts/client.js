@@ -32,7 +32,7 @@ $(document).ready(function() {
         </header>
         <label>${tweetObj.content.text}</label>
         <footer>
-          <output>${tweetObj.created_at} Days Ago</output>
+          <output>${timeago.format(tweetObj.created_at)}</output>
           <output>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>

@@ -49,18 +49,25 @@ $(document).ready(function() {
   $tweetForm.submit((event) => {
 
     event.preventDefault();
-    const serializedForm = $tweetForm.serialize();
+    input = $tweetForm.find('#tweet-text').val();
+    if (input.length < 1) {
+      alert('Your Tweet has no content');
+    } else if (input.length > 140) {
+      alert('Your Tweet is too long! (must be less than 140 characters)');
+    } else {
+      const serializedForm = $tweetForm.serialize();
 
-    $.ajax({
-      url: 'http://localhost:8080/tweets',
-      method: 'POST',
-      data: serializedForm,
+      $.ajax({
+        url: 'http://localhost:8080/tweets',
+        method: 'POST',
+        data: serializedForm,
 
-      success: (response) => {
-        loadTweets('new');
-      }
-    
-    })
+        success: (response) => {
+          loadTweets('new');
+        }
+      
+      })
+    }
   });
 
   //Read array of tweet objects and append HTML elements to main page (index.html)

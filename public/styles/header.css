@@ -1,3 +1,7 @@
+/*
+* Stylesheet for the header section, below the navigation bar
+* Comprised of an Avatar image, background image, and name
+*/
 #nav-header {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,11 @@
   height: 75;
 }
 
+
+/*
+* Change layout for devices above 1024px in width
+* Shift header and main sections either vertically or horizontally
+*/
 @media screen and (min-width: 1024px) {
   #nav-header {
     position:absolute;

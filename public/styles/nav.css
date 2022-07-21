@@ -1,3 +1,6 @@
+/*
+* Stylesheet for the main navigation bar
+*/
 nav {
   display: flex;
   flex-direction: row;
@@ -31,11 +34,12 @@ nav > span {
   color: red;
 }
 
+/*
+* Change layout for devices above 1024px in width
+* Change background colour to be visible above header
+*/
 @media screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;  
   }
 }
-/*
-background-color: #4056A1;  
-*/

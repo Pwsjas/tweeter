@@ -1,24 +1,21 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-  // Test / driver code (temporary). Eventually will get this from the server.
-
+//Client side JS logic
 $(document).ready(function() {
 
+  //Load all tweets from server using an AJAX GET request
+  //Call renderTweets to display as HTML
+  //Parameter required to display a new tweet (truthy value)
   const loadTweets = function(newTweet) {
     $.ajax('http://localhost:8080/tweets')
-    .then(function (tweetsArr) {
-      if (newTweet){
-        renderTweets([tweetsArr[tweetsArr.length - 1]]);
-      } else {
-        renderTweets(tweetsArr);
-      }
-    })
+      .then(function(tweetsArr) {
+        if (newTweet) {
+          renderTweets([tweetsArr[tweetsArr.length - 1]]);
+        } else {
+          renderTweets(tweetsArr);
+        }
+      });
   };
 
-  //Create appropriate HTML structure for a new tweet using passed Object 
+  //Create appropriate HTML structure for a new tweet using passed Object
   const createTweetElement = function(tweetObj) {
     const $tweet = $(`
     <article class="display-tweet">
@@ -40,16 +37,16 @@ $(document).ready(function() {
           </output>
         </footer>
   </article>
-    `)
-  return $tweet;
+    `);
+    return $tweet;
   };
 
-  //Convert HTML to a string (does nothing if passed non-html)
-  const escape = function (str) {
+  //Convert HTML to a string
+  const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   //AJAX POST request for new-tweet form submission
   const $tweetForm = $('.tweet-form');
@@ -74,12 +71,12 @@ $(document).ready(function() {
           loadTweets('new');
         }
       
-      })
+      });
     }
   });
 
   //Display or Hide new-tweet error box
-  const displayError = function (err) {
+  const displayError = function(err) {
     if (err) {
       $('#error-content').text(err);
       $('#error').slideDown('slow');
@@ -87,17 +84,16 @@ $(document).ready(function() {
       $('#error').slideUp('slow');
       $('#error-content').text('');
     }
-  }
+  };
 
   //Read array of tweet objects and append HTML elements to main page (index.html)
-  const renderTweets = function (tweetsArr) {
+  const renderTweets = function(tweetsArr) {
     for (const tweetObj of tweetsArr) {
       const $tweet = createTweetElement(tweetObj);
       $('.tweets-container').prepend($tweet);
     }
   };
-//Testing
-  //renderTweets(loadTweets());
-  //console.log(loadTweets());
+
+  //Load tweets upon initial document load
   loadTweets();
 });

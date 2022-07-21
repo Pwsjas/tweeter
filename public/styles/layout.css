@@ -26,7 +26,7 @@ body {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+* Main page content (everything below header)
  */
 main {
   display:flex;
@@ -46,7 +46,8 @@ main {
 }
 
 /*
-Layout changes for devices below 1024px in width
+* Change layout for devices above 1024px in width
+* Shift header and main sections either vertically or horizontally
 */
 @media screen and (min-width: 1024px) {
   .mobile-container {

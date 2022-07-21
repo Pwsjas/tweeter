@@ -1,3 +1,6 @@
+/*
+* Stylesheet for the display tweets section
+*/
 .tweets-container {
   display:flex;
   flex-direction: column;
@@ -15,6 +18,7 @@ article {
   font-weight: 700;
 }
 
+/*Box shadow on hover*/
 article:hover {
   box-shadow: 5px 5px rgb(177, 175, 201);
 }
@@ -72,6 +76,7 @@ article footer output i {
   color: #4056A1;
 }
 
+/*Colour change on hover*/
 article footer output i:hover {
   color:darkgoldenrod;
 }

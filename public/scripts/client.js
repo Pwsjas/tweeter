@@ -26,11 +26,11 @@ $(document).ready(function() {
         <header>
           <div>
             <img src=${tweetObj.user.avatars}>
-            <output>${tweetObj.user.name}</output>
+            <output>${escape(tweetObj.user.name)}</output>
           </div>
-          <output id="faded">${tweetObj.user.handle}</output>
+          <output id="faded">${escape(tweetObj.user.handle)}</output>
         </header>
-        <label>${tweetObj.content.text}</label>
+        <label>${escape(tweetObj.content.text)}</label>
         <footer>
           <output>${timeago.format(tweetObj.created_at)}</output>
           <output>
@@ -44,6 +44,13 @@ $(document).ready(function() {
   return $tweet;
   };
 
+  //Convert HTML to a string (does nothing if passed non-html)
+  const escape = function (str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   //AJAX POST request for new-tweet form submission
   const $tweetForm = $('.tweet-form');
   $tweetForm.submit((event) => {
@@ -51,10 +58,11 @@ $(document).ready(function() {
     event.preventDefault();
     input = $tweetForm.find('#tweet-text').val();
     if (input.length < 1) {
-      alert('Your Tweet has no content');
+      displayError('Your tweet has no content!');
     } else if (input.length > 140) {
-      alert('Your Tweet is too long! (must be less than 140 characters)');
+      displayError('Your Tweet is too long! (must be less than 140 characters)');
     } else {
+      displayError();
       const serializedForm = $tweetForm.serialize();
 
       $.ajax({
@@ -69,6 +77,17 @@ $(document).ready(function() {
       })
     }
   });
+
+  //Display or Hide new-tweet error box
+  const displayError = function (err) {
+    if (err) {
+      $('#error-content').text(err);
+      $('#error').slideDown('slow');
+    } else {
+      $('#error').slideUp('slow');
+      $('#error-content').text('');
+    }
+  }
 
   //Read array of tweet objects and append HTML elements to main page (index.html)
   const renderTweets = function (tweetsArr) {

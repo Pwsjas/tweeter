@@ -5,6 +5,7 @@
  */
 html {
   box-sizing: border-box;
+  position:relative;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -33,4 +34,36 @@ main {
   align-items: center;
   color:#545149;
   width: 90%;
+  margin-top: 400px;
+  margin-bottom: 2em;
+}
+
+.mobile-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/*
+Layout changes for devices below 1024px in width
+*/
+@media screen and (min-width: 1024px) {
+  .mobile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    width: 66%;
+    margin-top:100px;
+    margin-left: 33%;
+  }
 }

@@ -5,6 +5,17 @@
   padding-top: 2em;
 }
 
+.new-tweet #error {
+  text-align: center;
+  display: none;
+  color:red;
+  height: 1.5em;
+  border-color: red;
+  border-style: solid;
+  border-width: 3px;
+  margin-bottom: 1em;
+}
+
 .submit-counter {
   display:flex;
   flex-direction: row;
@@ -19,9 +30,13 @@
 .submit-counter > button {
   background-color: #4056A1;
   color: #FFFFFF;
-  border: #4056A1;
+  border: 5px solid #4056A1;
   font-family: 'Bungee', cursive;
   padding: 0.25em 0.5em 0.25em 0.5em;
+}
+
+.submit-counter > button:hover {
+  border: 5px solid rgb(89, 168, 192);
 }
 
 .tweet-form {

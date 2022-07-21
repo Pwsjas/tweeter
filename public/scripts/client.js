@@ -69,8 +69,9 @@ $(document).ready(function() {
 
         success: (response) => {
           loadTweets('new');
+          $('#tweet-text').val('');
+          $('.counter').val('140');
         }
-      
       });
     }
   });

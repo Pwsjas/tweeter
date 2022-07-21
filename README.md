@@ -9,8 +9,11 @@ The front-end was developed by me, using HTML, CSS, Javascript, Jquery, and AJAX
 Tweeter resizes based on window size, providing different viewing experiences for Desktop and Mobile users.
 
 Desktop:
+
 !["Screenshot of desktop version"](https://github.com/Pwsjas/tweeter/blob/master/docs/desktop.png?raw=true)
+
 Mobile:
+
 !["Screenshot of mobile version"](https://github.com/Pwsjas/tweeter/blob/master/docs/mobile.png?raw=true)
 
 ## Dependencies
